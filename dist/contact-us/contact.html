@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartupLanding-Contact</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                boxShadow: {
+                    'custom': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                    'custom-lg': '0 10px 30px rgba(0, 0, 0, 0.12)',
+                }
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="relative bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../../images-proj/logo.png" alt="StartupLanding Logo">
+                    </a>
+                </div>
+                <div class="md:flex items-center space-x-4">
+                    <a href="#" class="text-sm text-gray-600">Home</a>
+                    <div class="relative">
+                        <button class="text-sm text-gray-600 flex items-center">
+                            Categories
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="#" class="text-sm text-gray-600">Contact</a>
+                    <a href="#" class="text-sm text-gray-600">About us</a>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="#" class="ml-8 rounded-md bg-[#FFB946] px-4 py-2 text-sm font-medium text-white">
+                        Purchase Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <section class="py-48 flex justify-center items-center bg-gradient-to-b from-[#FFFEFC80] to-[#FEFAF5]">
+        <div class="max-w-6xl">
+            <div class="flex items-center space-x-4 mb-16">
+                <div class="w-24 h-1 bg-[#1F1F1F]"></div>
+                <h1 class="text-4xl md:text-5xl font-bold text-secondary text-[#1F1F1F]">Contact us</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+                <div class="flex space-x-2">
+                    <div class="m-[5%] h-12 w-12 flex items-center justify-center flex-shrink-0">
+                        <img src="../../images-proj/Group 34.png" alt="icon">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-secondary mb-2">Address</h2>
+                        <p class="text-text-gray leading-relaxed text-[#808080]">Jaipur Rajasthan INDIA<br>Pin 342087
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-6">
+                    <div class="m-[5%] h-12 w-12 flex items-center justify-center flex-shrink-0">
+                        <img src="../../images-proj/Group 33.png" alt="icon">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-[#1F1F1F] mb-2">Call us</h2>
+                        <p class="text-text-gray leading-relaxed text-[#808080]">+91 98765 43210</p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-6">
+                    <div class="m-[5%] h-12 w-12 flex items-center justify-center flex-shrink-0">
+                        <img src="../../images-proj/Group 35.png" alt="icon">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-[#1F1F1F] mb-2">Email us</h2>
+                        <p class="text-text-gray leading-relaxed text-[#808080]">info@test.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-semibold text-[#2E2F35] mb-2">Get in touch with us.</h2>
+                <p class="text-4xl text-text-gray font-semibold">We're here to assist you.</p>
+            </div>
+
+            <form class="max-w-4xl mx-auto bg-white p-16 rounded-3xl shadow-lg text-[#808080]" action=""
+                onsubmit="return validateForm()" method="post">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="flex flex-col">
+                        <label for="fullname" class="text-sm text-gray-600 mb-1">Full name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Ram Kumar Sharma" required
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-[#2E2F35] font-medium" />
+                        <span id="fullname-error" class="form-error text-sm text-red-600"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="email" class="text-sm text-gray-600 mb-1">Email address</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none font-medium" />
+                        <span id="email-error" class="form-error text-sm text-red-600"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="phone" class="text-sm text-gray-600 mb-1">Phone number</label>
+                        <input type="tel" id="phone" name="phone" required
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-gray-800 font-medium" />
+                        <span id="phone-error" class="form-error text-sm text-red-600"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="dob" class="text-sm text-gray-600 mb-1">Date of birth</label>
+                        <input type="date" id="dob" name="dob" required
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-gray-800 font-medium" />
+                        <span id="dob-error" class="form-error text-sm text-red-600"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="gender" class="text-sm text-gray-600 mb-1">Gender</label>
+                        <select id="gender" name="gender" required
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-gray-800 font-medium">
+                            <option value=""></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span id="gender-error" class="form-error text-sm text-red-600"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="city" class="text-sm text-gray-600 mb-1">City</label>
+                        <input type="text" id="city" name="city" required
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-gray-800 font-medium" />
+                        <span id="city-error" class="form-error text-sm text-red-600"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="state" class="text-sm text-gray-600 mb-1">State</label>
+                        <input type="text" id="state" name="state" required
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-gray-800 font-medium" />
+                        <span id="state-error" class="form-error text-sm text-red-600"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="country" class="text-sm text-gray-600 mb-1">Country</label>
+                        <input type="text" id="country" name="country" required
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-gray-800 font-medium" />
+                        <span id="country-error" class="form-error text-sm text-red-600"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="address" class="text-sm text-text-gray mb-1">Address</label>
+                        <input type="text" id="address" name="address"
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-gray-800 font-medium" />
+                        <span class="form-error text-2xl text-red-700 font-semibold"></span>
+                    </div>
+
+                    <div class="flex flex-col ">
+                        <label for="message" class="text-sm text-text-gray mb-1">Message</label>
+                        <textarea id="message" name="message" rows="1"
+                            class="w-full py-3 border-b-2 border-gray-300 focus:border-secondary outline-none text-gray-800 font-medium"
+                            required></textarea>
+                        <span class="form-error text-2xl text-red-700 font-semibold"></span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <p class="text-text-gray mb-4">Request a counselling session</p>
+                        <div class="flex space-x-8">
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="counselling" value="yes" checked
+                                    class="w-5 h-5 text-secondary focus:ring-secondary bg-[#FFEED3]" />
+                                <span class="text-text-gray">Yes</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="counselling" value="no"
+                                    class="w-5 h-5 text-secondary focus:ring-secondary" />
+                                <span class="text-text-gray">No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border-solid border-b-2 border-gray-300">
+                        <label for="cv" class="text-sm text-[#808080] mb-1 cursor-pointer">Upload your CV/Resume</label>
+                        <div class="flex gap-3 mt-4">
+                            <img src="../../images-proj/contact-form/upload.png" alt="Upload icon" class="w-6 h-6" />
+                            <input type="file" id="cv" name="cv" required />
+                            <span id="cv-error" class="form-error text-sm text-red-600"></span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="flex items-center space-x-2 md:col-span-2">
+                    <input type="checkbox" id="terms" name="terms" required />
+                    <label for="terms" class="text-[#808080] cursor-pointer">Agree to terms and conditions</label>
+                    <span id="terms-error" class="form-error text-sm text-red-600"></span>
+                </div>
+
+                <button type="submit"
+                    class="w-[40%] mt-[5%] bg-[#FABF62] text-white py-4 px-8 text-md font-medium hover:bg-opacity-90 transition duration-300">
+                    Submit Information
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- map section -->
+    <section class="flex justify-center items-center px-[20%]">
+        <img src="../../images-proj/image 20 (1).png" alt="map" class="object-cover">
+    </section>
+
+    <!-- frequent question  -->
+    <section class="max-w-3xl mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-[#0F2137] mb-4">Do you have any quesiton</h2>
+            <p class="text-lg text-[#0F2137]">Our support team ready to help you, please contact with them</p>
+        </div>
+
+        <div class="space-y-6">
+            <div class="border-b border-gray-200 pb-6">
+                <div class="flex items-center cursor-pointer faq-tab">
+                    <div
+                        class="w-6 h-6 bg-[#fabf62] rounded-full flex items-center justify-center text-[#1f1f1f] text-xl leading-none transition-transform duration-300 faq-toggle">
+                        +</div>
+                    <h3 class="text-lg text-[#0F2137] font-medium ms-4"> How to contact with riders emergency?
+                    </h3>
+                </div>
+                <div class="mt-4 text-text-gray leading-relaxed hidden faq-answer">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news.
+                </div>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <div class="flex  items-center cursor-pointer faq-tab">
+                    <div
+                        class="w-6 h-6 bg-[#fabf62] rounded-full flex items-center justify-center text-[#1f1f1f]  text-xl leading-none transition-transform duration-300 faq-toggle">
+                        +</div>
+                    <h3 class="text-lg text-[#0F2137] font-medium ms-4">App installation failed, how to update system
+                        information?</h3>
+                </div>
+                <div class="mt-4 text-text-gray leading-relaxed hidden faq-answer">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news.
+                </div>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <div class="flex  items-center cursor-pointer faq-tab">
+                    <div
+                        class="w-6 h-6 bg-[#fabf62] px-[0.5vw] rounded-full flex items-center justify-center text-[#1f1f1f]  text-xl leading-none transition-transform duration-300 faq-toggle">
+                        -</div>
+                    <h3 class="text-lg text-[#0F2137] font-medium ms-4">Website reponse taking time, how to improve? <p
+                            class="text-gray-600 font-light mt-[2vh]">Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Eos, vitae tempora corporis iusto porro, omnis placeat earum veniam harum,
+                            eius voluptatem perferendis voluptas. Laudantium ipsa cupiditate iste soluta, excepturi
+                            dolore.</p>
+                    </h3>
+                </div>
+                <div class="mt-4 text-text-gray leading-relaxed hidden faq-answer">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news. Get your blood tests delivered at
+                    the home collect a sample from management news. Get your blood tests delivered at the home.
+                </div>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <div class="flex  items-center cursor-pointer faq-tab">
+                    <div
+                        class="w-6 h-6 bg-[#fabf62] rounded-full flex items-center justify-center text-[#1f1f1f]  text-xl leading-none transition-transform duration-300 faq-toggle">
+                        +</div>
+                    <h3 class="text-lg text-[#0F2137] font-medium ms-4">New update fixed all bug and issues</h3>
+                </div>
+                <div class="mt-4 text-text-gray leading-relaxed hidden faq-answer">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter section  -->
+    <section class="bg-light-blue py-20 px-8 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-medium text-secondary leading-tight mb-6">
+                Subscribe to Our Newsletter<br>for Design Insights
+            </h2>
+            <p class="text-lg text-text-gray leading-relaxed mb-12 max-w-2xl mx-auto">
+                Be the first to discover trends, inspirations, and special offers as we bring the world of design
+                directly to your inbox
+            </p>
+            <form
+                class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto bg-white p-2 rounded-lg border border-gray-200">
+                <div class="relative flex-grow">
+                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 text-text-gray" width="20"
+                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <path d="M22 6l-10 7L2 6" />
+                    </svg>
+                    <input type="email"
+                        class="w-full py-4 pl-12 pr-4 text-gray-800 bg-transparent border-0 focus:outline-none"
+                        placeholder="Enter your email address">
+                </div>
+                <button type="submit"
+                    class="bg-[#FABF62] hover:bg-opacity-90 text-white py-4 px-12 rounded text-base font-medium transition duration-300 whitespace-nowrap">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- contact us section  -->
+    <section class="text-white sm:px-6 lg:px-8 rounded-lg mx-4">
+        <div
+            class="max-w-6xl bg-[#183656] px-4 py-10 mx-auto flex flex-col md:flex-row items-center justify-between gap-8 rounded-lg">
+            <div class="">
+                <h2 class="text-3xl font-bold">Do you have any question? Feel free to contact us</h2>
+            </div>
+            <div>
+                <img class="w-full h-auto" src="../../images-proj/contact/pattarn.png" alt="">
+            </div>
+
+            <div class="me-[10px] relative w-[10%] right-[171px] ">
+                <button class="bg-white text-[#1F2937] px-8 py-3 w-[224px] rounded-lg font-medium">
+                    CONTACT US NOW
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white px-4 sm:px-6 lg:px-8 py-16 ">
+        <div class="max-w-6xl  mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+                <!-- Logo Column -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="../../images-proj/logo.png" alt="StartupLanding Logo" class="" />
+                        <!-- <span class="text-xl font-semibold">StartupLanding</span> -->
+                    </div>
+                    <div class="space-y-4 text-sm text-gray-600">
+                        <div class="flex gap-4">
+                            <a href="#" class="">Terms of use</a>
+                            <span>|</span>
+                            <a href="#" class="">Privacy</a>
+                        </div>
+                        <p>Copyright by 2019 YourName, Inc</p>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">About Us</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li><a href="#" class="">Support Center</a></li>
+                        <li><a href="#" class="">Customer Support</a></li>
+                        <li><a href="#" class="">About Us</a></li>
+                        <li><a href="#" class="">Copyright</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Information -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Our Information</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li><a href="#" class="">Return Policy</a></li>
+                        <li><a href="#" class="">Privacy Policy</a></li>
+                        <li><a href="#" class="">Terms & Conditions</a></li>
+                        <li><a href="#" class="">Site Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- My Account -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">My Account</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li><a href="#" class="">Press inquiries</a></li>
+                        <li><a href="#" class="">Social media</a></li>
+                        <li><a href="#" class="">directories</a></li>
+                        <li><a href="#" class="">Images & B-roll</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Connect</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li>
+                            <a href="#" class="flex items-center gap-2">
+                                <img src="../../images-proj/contact/facebook.png" class="w-5 h-5" alt="">
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-2">
+                                <img src="../../images-proj/contact/twitter.png" class="w-5 h-5" alt="">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-2">
+                                <img src="../../images-proj/contact/github.png" class="w-5 h-5" alt="">
+                                Github
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-2">
+                                <img src="../../images-proj/contact/dribble.png" class="w-5 h-5" alt="">
+                                Dribbble
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
